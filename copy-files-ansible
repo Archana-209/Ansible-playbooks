@@ -1,0 +1,9 @@
+---
+- hosts: webserver
+  become: true
+  become_user: root
+  tasks:
+  - name: copy file from source to destination
+    copy:
+      src: /etc/ansible/diy.txt
+      dest: nginx
